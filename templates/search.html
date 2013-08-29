@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page %}{% trans "Search" %}{% endblock %}
+
+{% block Content %}
+    {% load static from staticfiles %}
+    <article>
+    <p>{% trans "You searched for " %} <strong>"{{ query }}"</strong>{% trans "; the results are listed below." %}</p>
+        <ul>
+            {% for page in results %}
+                <li><a href="/articles/{{ page.slug }}">{{ page.title }}</a></li>
+                <p>{{ page.body|safe|slice:"200" }}</p>
+            {% endfor %}
+        </ul>
+    </article>
+{% endblock %}

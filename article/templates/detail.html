@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page %}{% trans "Deatil" %}{% endblock %}
+
+{% block Content %}
+    {% load static from staticfiles %}
+    <article>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <header>
+            <div class="date">
+                {{ article.pub_date.month }}<br /><span class="day">
+                {{ article.pub_date.day }}</span><br />
+                {{ article.pub_date.year }}
+            </div>
+            <div class="category">
+            {% for cats in article.categories.all %}
+                <a href="" title="{% trans "See all articles in category " %}{{ cats.name}}" rel="category tag">
+                    {{ cats.name }}<br />
+                </a>
+            {% endfor %}
+            </div>
+            <h1>{{ article.title }}</h1>
+        </header>
+        <div class="postMetaSingle">
+
+            <img src="{% static 'images/ico_author.png' %}" alt="Author"/>
+            {% trans "An article by" %}
+            <a href=""
+               title="{{ article.author.first_name }}"
+               rel="author external">
+                {{ article.author.first_name }}
+            </a>&nbsp;&nbsp;&nbsp;
+			<img src="{% static 'images/ico_comments.png' %}" alt="Comments"/>
+            <a href="#comments"
+               title="Comments">
+               {{ comments.count }} {% trans "Comments" %}
+            </a>
+            <div class="postTags">{{ article.tags }}</div>
+        </div>
+
+        <p>
+{#            <div class="postThumb">#}
+{#                <a href="">#}
+{#                    <img class="attachment-post-thumbnail wp-post-image"#}
+{#                         height="150" width="180" alt="{{ article.tags }}" src="{{ article.image.url }}">#}
+{#                    </img>#}
+{#                </a>#}
+{#            </div>#}
+            <div class="article_body clearfix">
+                {{ article.body|safe }}
+            </div>
+        </p>
+
+        <div class="postCredentials" id="comments">
+            {% if user.is_authenticated and article.author_id == user.id %}
+                <div >
+                     <a href="/articles/edit/{{ article.slug }}">
+                         {% trans "Edit Article" %}
+                     </a>
+                </div>
+            {% endif %}
+        </div>
+        {% include "comment.html" %}
+    </article>
+{% endblock %}

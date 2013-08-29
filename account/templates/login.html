@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page %}{% trans "Login" %}{% endblock %}
+
+{% block Content %}
+    {% load static from staticfiles %}
+    <article>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if fail %}
+            {% if is_active %}
+                <p class="error"> {% trans "Username or Password is incorrect" %}</p>
+            {% else %}
+                <p class="error"> {% trans "User is not active" %}</p>
+            {% endif %}
+        {% endif %}
+        <form action="/accounts/auth/" method="POST" >{% csrf_token %}
+            <label for="inputEmail" class="control-label">{% trans "Email" %}</label>
+            <input type="text" class="form-control" placeholder="{% trans "Email" %}"  name="username" id="username"><br />
+            <label for="inputPassword" class="control-label">{% trans "Password" %}</label>
+            <input type="password" class="form-control" placeholder="{% trans "Password" %}"  name="password" id="password">
+            <br />
+            <button type="submit" class="btn btn-default">{% trans "Sign in" %}</button>
+        </form>
+    </article>
+{% endblock %}

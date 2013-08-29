@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+    <!-- html -->
+<html lang="tr-TR">
+    {% load static from staticfiles %}
+    <!-- head -->
+	<head>
+        {% load i18n %}
+        <!-- title -->
+        <meta charset="UTF-8" />
+        <title> Yakup Blog</title>
+
+        <!-- meta -->
+        <meta name="description" content="" />
+{#        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" >#}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" >
+
+{#        <link rel="stylesheet" type="text/css" href="{% static 'pagination/css/styles.css' %}" >#}
+{#        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>#}
+{#        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>#}
+{#        <script src="{% static 'pagination/js/jquery_paginate.js' %}"></script>#}
+
+{#        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>#}
+{#        <script src="{% static 'pagination/script.js' %}"></script>#}
+        <link rel="stylesheet" type="text/css" href="{% static 'pagination/styles.css' %}" >
+
+
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" >
+        <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+{#        <script type="text/javascript" src="/static/ckeditor/ckeditor/ckeditor.js"></script>#}
+        <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}" ></script>
+{#        <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />#}
+{#        <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />#}
+
+        <style>
+            .success {
+                border: 1px solid;
+                display: block;
+                padding: 7px 7px 7px 30px;
+                background-repeat: no-repeat;
+                background-position: 10px center;
+                color: #4F8A10;
+                border-radius: 6px 6px 6px 6px;
+                border: 1px solid rgb(251, 194, 196);
+                background-color: #DFF2BF;
+                background-image:url("/../static/images/ok.png");
+            }
+        </style>
+    </head>
+
+<body>
+<!-- Begin #wrapper -->
+	<div id="wrapper">
+		<!-- Begin #header -->
+		<header>
+			<div id="logo">
+				<a href="/" title="Yakup Blog" rel="home">
+					LOGO
+				</a>
+
+				<span></span>
+			</div>
+			<!-- Begin #topMenu -->
+
+			<!-- End #topMenu -->
+			<!-- Begin #topMenuRight -->
+				<div id="topMenuRight">
+					<ul>
+					</ul>
+				</div>
+			<!-- End #topMenuRight -->
+			<!-- Begin #socialLinks -->
+				<div id="socialLinks">
+					<a href="" class="facebook" title="Join us on Facebook!">Facebook!</a>
+					<a href="" class="twitter" title="{% trans "Follow us in Twitter!" %}">Twitter</a>
+				</div>
+			<!-- End #socialLinks -->
+		</header>
+		<!-- End #header -->
+		
+		<!-- Begin #content -->
+		<div id="content" class="clearfix">
+
+			<!-- Begin section -->
+
+            <section>
+				<!-- archive-title -->				
+				<!-- /archive-title -->
+				<!-- Begin article -->
+                {% block Content %}
+
+                {% endblock %}
+				<!-- End article -->
+
+			</section>
+			<!-- End section -->
+	<!-- Begin aside -->
+			<aside>
+                {% if user.is_authenticated %}
+                    <div class="rightBox">
+                        <h2>{% trans "Hello" %} {{ user.first_name }}</h2>
+                        <div class="textwidget">
+                            <ul>
+                                <li><a href="/accounts/profile" target="">{% trans "Profile" %}</a></li>
+                                <li><a href="/articles/add-article" target="">{% trans "Add Article" %}</a></li>
+                                <li><a href="/articles/my-articles" target="">{% trans "My Articles" %}</a></li>
+                                <li><a href="/accounts/logout" target="">{% trans "Logout" %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                {% endif %}
+
+                <form id="searchform" action="/search" method="get">
+                    <div class="rightBox rightBoxMidSearch">
+                            <input type="text" id="s" name="search" placeholder="{% trans "Search..." %}"/>
+                            <input type="submit" value="" class="submit" id="searchsubmit"/>
+                    </div>
+                </form>
+
+                <!-- Begin #twitter -->
+{#				<div id="twitter">					#}
+{#						<div id="twitter_update_list">#}
+{#						</div>#}
+{#					<div id="bottom"><a href="">Bizi Twitter'da Takip Edin!</a></div>#}
+{#				</div>#}
+                <!-- End #twitter -->
+                <div class="rightBox">
+                    <h2>{% trans "Links" %}</h2>
+                    <div class="textwidget">
+                        <ul>
+                            <li><a href="/admin/" target="">{% trans "Admin Login" %}</a></li>
+                            <li><a href="/contact/" target="">{% trans "Contact" %}</a></li>
+                            {% if not user.is_authenticated  %}
+                                <li><a href="/accounts/login/" target="">{% trans "Login" %}</a></li>
+                                <li><a href="/accounts/register/" target="">{% trans "Register" %}</a></li>
+                            {% endif %}
+
+{#                            <li><a href="/product/" target="">Category</a></li>#}
+                        </ul>
+                    </div>
+                </div>
+			</aside>
+			<!-- End aside -->
+			
+		</div>
+			<!-- end content -->
+		
+	</div>
+	<!-- end wrapper -->
+	<!-- begin footer -->
+	<footer>
+		<div id="footerInner">	
+		</div>
+	</footer>
+	
+	<div id="copyright">
+		<div id="copyrightInner">
+			<div id="site5bottom">Yakup Blog 2013</div>
+		</div>
+	</div>
+	<!-- end footer -->
+</body>
+</html>

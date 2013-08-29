@@ -1,0 +1,16 @@
+django==1.4.5
+PIL
+celery
+pytz
+redis-sessions
+redis
+django-redis-sessions
+django-redis-cache
+ckeditor --> http://ckeditor.com/download
+unidecode -->  https://pypi.python.org/pypi/Unidecode/
+debug-toolbar
+django-celery
+celery
+rabbitmq
+rabbitmq-server
+

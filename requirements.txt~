@@ -1,0 +1,21 @@
+PIL
+celery
+pytz
+django==1.4.5 --> pip install django==1.4.5
+
+redis-sessions --> sudo apt-get install redis-server
+redis --> pip install redis
+django-redis-sessions --> pip install django-redis-sessions
+django-redis-cache --> pip install django-redis-cache 
+
+ckeditor --> http://ckeditor.com/download
+
+unidecode -->  https://pypi.python.org/pypi/Unidecode/
+
+debug-toolbar --> pip install django-debug-toolbar
+django-celery --> pip install django-celery
+celery --> pip install celery
+pil --> sudo pip install pil
+rabbitmq
+rabbitmq-server --> sudo apt-get install rabbitmq-server
+

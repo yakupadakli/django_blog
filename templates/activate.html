@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page %}{% trans "Activation Page" %}{% endblock %}
+
+{% block Content %}
+    {% load static from staticfiles %}
+    <article>
+
+        <span>{{ message }}</span>
+        {% if send_key_again %}
+            <form action="/accounts/re_send_activation/" method="POST" >{% csrf_token %}
+                <input type="text" placeholder="E-mail" name="email"><br />
+                <input type="submit" value="Send">
+            </form>
+        {% endif %}
+    </article>
+{% endblock %}

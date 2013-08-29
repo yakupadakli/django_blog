@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page %}{% trans "Edit Article" %}{% endblock %}
+
+{% block Content %}
+    {% load static from staticfiles %}
+    <article>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <h2>{% trans "Edit Article" %}</h2>
+        <form action="./" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+                {% if field.name != "username" %}
+                    <div class="field-wrapper">
+                        <br />
+                        {% if field.name != "author" %}
+                            {{ field.label_tag }}
+                            {% if field.field.required %}
+                                <span class="required">*</span>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    {% if field.name == "image" %}
+                        <div id="highlight_image" style="width: 250px;float: left;">
+                            {{ field }}
+                            {{ field.errors }}
+                        </div>
+                        <div style="float: right;">
+                        <img id="highlight_img" style="margin-top: -15px; max-width: 170px; max-height: 120px"
+                             src="{{ image.url }}">
+                        </div>
+                        <div class="clearfix"></div>
+                    {% else %}
+                        {{ field }}
+                        {{ field.errors }}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <br />
+            <input type="submit" value="Save"  class="btn btn-default"/>
+            <input type="reset" value="Reset"  class="btn btn-default" />
+        </form>
+    </article>
+    <style>
+        .aa{
+            max-width: 600px;
+            overflow: auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("p").attr('style', 'max-width: 600px; overflow: auto;');
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#highlight_img').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $("input:file").on("change", function(){
+                readURL(this);
+            });
+        });
+    </script>
+{% endblock %}

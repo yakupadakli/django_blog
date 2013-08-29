@@ -1,0 +1,179 @@
+{% load i18n %}
+
+<div class="postBoxMidInner">
+    {% if comments.count > 1 %}
+        <h2 class="h2comments">{{ comments.count }} {% trans "Comments" %}
+    {#        <span style="font-size: 28px">{{ comments_of_comments.count }}</span> Sub-Comments</span>#}
+            <a href="#respond" class="addComment">+ {% trans "Add Comment" %}</a>
+        </h2>
+    {% else %}
+        <h2 class="h2comments">{{ comments.count }} {% trans "Comment" %}
+            <a href="#respond" class="addComment">+ {% trans "Add Comment" %}</a>
+        </h2>
+    {% endif %}
+    <ul class="commentlist">
+        {% for comment in comments %}
+            <li class="comment clearfix" id="li-comment-{{ comment.id }}" value="{{ comment.id }}">
+                <div class="gravatar">
+                    <img alt="" src="{{ comment.picture }}" class="avatar avatar-38 photo" height="38" width="38">
+                    <div class="gravatar_mask"></div>
+                </div>
+                <div id="comment-{{ comment.id }}">
+                    <div class="comment-meta clearfix">
+                        <strong>
+                            {{ comment.name }} {{ comment.author.last_name }}
+                        </strong>
+                        <span>
+                            {{ comment.pub_date }}
+                        </span>
+                    </div>
+
+                    <div class="text">
+                        <p style="margin-top: 30px;">{{ comment.comment }}</p>
+                    </div>
+                    <div class="reply">
+                        <a class="comment-reply-link" href="#respond" id="{{ comment.id }}">{% trans "Answer" %}</a>
+                    </div>
+                </div>
+                {% for comment_of_comment in comments_of_comments %}
+                    {% if comment_of_comment.object_id == comment.id  %}
+                        <div class="hideShow">
+                            <input class ="btn-block" type="button" value="Hide" id="btn_{{ comment.id }}" style="margin-top: -18px">
+                        </div>
+                        {% include "comment_of_comment.html" with test_template="comment_of_comment.html" counter=1 com_id=comment_of_comment.id commementt=comment_of_comment%}
+                    {% endif %}
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div id="respond">
+        <h2 id="commentsForm">{% trans "Leave a comment" %}</h2>
+        <form action="./#respond" method="post" id="commentform">{% csrf_token %}
+{#                {{ form.as_p }}#}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+                <div class="field-wrapper">
+                    <br />
+                    {{ field.label_tag }}
+                    {% if field.field.required %}
+                        {{ field.errors }}
+                        <span class="required">{% trans "(required)" %}</span>
+                    {% endif %}
+                </div>
+                {% if user.is_authenticated and field.name == "name"%}
+                    <input disabled="" id="id_name"
+                           value="{{ user.first_name }} {{ user.last_name }}"
+                           maxlength="150"
+                           type="text">
+                    <input type="hidden" name="name" value="{{ user.first_name }} {{ user.last_name }}"/>
+                {% elif user.is_authenticated and field.name == "email"%}
+                    <input disabled=""
+                           id="id_email"
+                           name="email"
+                           value="{{ user.email }}"
+                           maxlength="75"
+                           type="text">
+                    <input type="hidden" name="email" value="{{ user.email }}" />
+                {% else %}
+                    {{ field }}
+                {% endif %}
+            {% endfor %}
+            <input name="content_type_id" id="content_type_id" value="{{ content_type_article }}"  type="hidden">
+            <input name="object_id" id ="object_id" value="{{ article.id }}"  type="hidden">
+            <br />
+            <p>
+                <input name="submit" id="submit" tabindex="5" value="POST COMMENT" type="submit">
+            </p>
+        </form>
+    </div>
+
+    <h2 class="h2comments_second" id="comment_second">
+            <a href="#respond" class="addComment">{% trans "+ Add Comment" %}</a>
+    </h2>
+</div>
+<style>
+{#    .hideShow{#}
+{#        width: 50px;#}
+{#        position: absolute;#}
+{#        right: 0;#}
+{#        top: 0;#}
+{#        height:50px;#}
+{#        margin-top: 10px;#}
+{#    }#}
+    .hideShow{
+        margin-top: 28px;
+        padding-top: 15px;
+        height:24px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 46px;
+        height: 21px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+</style>
+<script>
+
+    $(document).ready(function(){
+{#        if ($(".btn-block").val() == "Hide"){#}
+{#                $(".btn-block").val("Show")#}
+{#                $(".btn-block").closest("li").find(".children").hide()#}
+{#            }else{#}
+{#                $(this).val("Hide")#}
+{#                $(".btn-block").closest("li").find(".children").show()#}
+{#            }#}
+        $(".btn-block").on("click", function(){
+            $(this).closest("li").find(".children").fadeToggle("fast");
+            if ($(this).val() == "Hide"){
+                $(this).val("Show")
+            }else{
+                $(this).val("Hide")
+            }
+        });
+        {% if show_comment_form %}
+            $("#respond").hide();
+            $("#comment_second").show();
+            var $content_type = {{ content_type_article }};
+            var $object_id = {{ article.id }};
+            $("#content_type_id").val($content_type);
+            $("#object_id").val($object_id);
+        {% else %}
+            $("#respond").show();
+            $("#comment_second").hide();
+        {% endif %}
+
+        $(".addComment").click(function() {
+            $("#comment_second").hide();
+            $("#respond").show();
+            $("#respond").fadeIn("slow");
+            var $content_type = {{ content_type_article }};
+            var $object_id = {{ article.id }};
+            $("#content_type_id").val($content_type);
+            $("#object_id").val($object_id);
+        });
+
+        $(".comment-reply-link").click(function() {
+            $("#comment_second").hide();
+            $("#respond").show();
+            $("#respond").fadeIn("slow");
+            var $content_type = {{ content_type_comment }}
+            var $object_id = $(this).attr('id');
+
+            $("#content_type_id").val($content_type);
+            $("#object_id").val($object_id);
+        });
+
+        $("#comment_second").click(function() {
+            $("#comment_second").hide();
+        });
+        $("#submit").click(function() {
+            $("#comment_second").show();
+            $("#respond").hide();
+        });
+    });
+
+
+</script>

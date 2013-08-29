@@ -1,0 +1,32 @@
+{#<html>#}
+{#    <head>#}
+{#        {% load static from staticfiles %}#}
+    {#    <link href="web/styles/404.css" rel="stylesheet" type="text/css" />#}
+{#        <link rel="stylesheet" type="text/css" href="{% static 'web/styles/404.css' %}" >#}
+{#    </head>#}
+{#    <body>#}
+{#        <form method="post" action="asas?req_path=%2fweb%2fasas" id="mainform">#}
+{#            <div class="container">#}
+{#                <div class="padding-404">#}
+{#                    <div class="outside">#}
+{#                        <div class="background-404"></div>#}
+{#                        <h4>Açılmayan bir sayfa buldunuz.</h4>#}
+{#                    </div>#}
+{#                    <div class="input-404">#}
+{#                        <input id="notFoundBox" />#}
+{#                    </div>#}
+{#                    <div class="left">#}
+{#                        <a id="lnkBtnSearch" href="javascript:">#}
+{#                            <img src="web/images/404-button.jpg" />#}
+{#                        </a>#}
+{#                    </div>#}
+{#                    <div class="clear"></div>#}
+{#                    <div class="line-big background-soft margin-404-item2">&nbsp;</div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </form>#}
+{#    </body>#}
+{#</html>#}
+{% load i18n %}
+
+<h3> {% trans "This is my system 500 page" %} </h3>

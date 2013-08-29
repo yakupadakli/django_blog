@@ -1,0 +1,36 @@
+<ul class="children" id="children_{{ commementt.id }}">
+    <li class="comment clearfix" id="li-comment-"{{ commementt.id }}>
+        <div class="gravatar">
+            <img alt="" src="{{ user_profile.user.picture.url }}" class="avatar avatar-38 photo" height="38" width="38">
+            <div class="gravatar_mask"></div>
+        </div>
+        <div id="comment-{{ commementt.id }}">
+            <div class="comment-meta commentmetadata clearfix">
+                <strong>
+                    {{ commementt.name }} {{ commementt.author.last_name }}
+                </strong>
+                <span>
+                    {{ commementt.pub_date }}
+                </span>
+            </div>
+            <div class="text">
+                <p style="margin-top: 35px;">{{ commementt.comment|safe }}</p>
+            </div>
+{#            {% if commementt.id %}#}
+                <div class="reply">
+                    <a class="comment-reply-link" href="#respond" id="{{ commementt.id }}">Answer</a>
+                </div>
+{#            {% endif %}#}
+
+        </div>
+        {% for c_of_c in comments_of_comments %}
+            {% if com_id == c_of_c.object_id %}{{ c_of_c.count }}
+                <div class="hideShow">
+                    <input class ="btn-block" type="button" value="Hide" id="btn_{{ comment.id }}" >
+                </div>
+                {% include test_template with com_id=c_of_c.id commementt=c_of_c counter=counter %}
+            {% endif %}
+        {% endfor %}
+    </li>
+</ul>
+

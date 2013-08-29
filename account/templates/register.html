@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page %}{% trans "Register" %}{% endblock %}
+
+{% block Content %}
+    {% load static from staticfiles %}
+    <article>
+        <form action="/accounts/register/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+                {% if field.name != "username" %}
+                    <div class="field-wrapper">
+                        <br />
+                        {{ field.label_tag }}
+                        {% if field.field.required %}
+                            <span class="required">*</span>
+                        {% endif %}
+                    </div>
+
+                    {{ field }}
+                    {{ field.errors }}
+                {% endif %}
+            {% endfor %}
+            <br /><br />
+            <input type="submit" value="{% trans "Register" %}"  class="btn btn-default"/>
+            <input type="reset" value="{% trans "Reset" %}"  class="btn btn-default" />
+        </form>
+    </article>
+    <style>
+        .errorlist{
+            display: inline-table;
+            margin-bottom: -10px;
+        }
+    </style>
+    <script>
+        $(function() {
+            $('#datepicker').datepicker({
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,
+                changeYear: true,
+                maxDate: "-18Y",
+                showWeek: true,
+                showButtonPanel: true,
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                showAnim: "slide"
+            });
+            $( document ).tooltip({
+              track: true
+            });
+        });
+    </script>
+{% endblock %}

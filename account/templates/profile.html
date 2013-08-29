@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page %}{% trans "Profile" %}{% endblock %}
+
+
+{% block Content %}
+    {% load static from staticfiles %}
+
+    <article>
+        <div style="float:left; width: 300px;">
+            <form action="/accounts/profile/" enctype="multipart/form-data"  method="post">{% csrf_token %}
+{#                <input type="text" value="{{ user_profile.user.username }}" name="username">#}
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {{ user_form.non_field_errors }}
+                {% for field in user_form %}
+                    {% if field.name != "username" %}
+                        <div class="field-wrapper">
+                            <br />
+                            {{ field.label_tag }}
+                            {% if field.field.required %}
+                                <span class="required">*</span>
+                            {% endif %}
+                        </div>
+
+                        {{ field }}
+                        {{ field.errors }}
+                    {% else %}
+                        {{ field }}
+                        {{ field.errors }}
+                    {% endif %}
+                {% endfor %}
+
+                {{ user_profile_form.non_field_errors }}
+                {% for field in user_profile_form %}
+                    {% if field.name != "username" %}
+                        <div class="field-wrapper">
+                            <br />
+                            {{ field.label_tag }}
+                            {% if field.field.required %}
+                                <span class="required">*</span>
+                            {% endif %}
+                        </div>
+                        {{ field }}
+                        {{ field.errors }}
+                    {% endif %}
+                {% endfor %}
+                <br /><br />
+                <input type="submit" value="Save"  class="btn btn-default"/>
+                <input type="reset" value="Reset"  class="btn btn-default" />
+                <a href="/accounts/profile/change-password/">
+                    <input type="button" value="{% trans "Change Password" %}"  class="btn btn-default" />
+                </a>
+            </form>
+        </div>
+        <div style="float:right; width: 240px; border: 1px solid red; margin-top: 25px">
+            <section id="profile_pic">
+                <img id="profile_picture" src="{{ user_profile.picture.url }}" title="Profile Picture"
+                     style="max-width: 240px; max-height: 240px;">
+            </section>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+
+
+    <script>
+        $(document).ready(function(){
+            $("p").attr('style', 'max-width: 600px; overflow: auto;');
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#profile_picture').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $("input:file").on("change", function(){
+                readURL(this);
+            });
+        });
+        $(function() {
+            $('#datepicker').datepicker({
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,
+                changeYear: true,
+                maxDate: "-18Y",
+                showWeek: true,
+                showButtonPanel: true,
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                showAnim: "slide"
+            });
+            $( document ).tooltip({
+              track: true
+            });
+        });
+    </script>
+{% endblock %}

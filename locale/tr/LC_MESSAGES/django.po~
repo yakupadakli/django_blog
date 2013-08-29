@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-22 12:43+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: article/form.py:22
+msgid "Please provide a title."
+msgstr "Lütfen başlık giriniz."
+
+#: article/form.py:25
+msgid "Please select categories."
+msgstr "Lütfen kategori seçiniz."
+
+#: article/form.py:28
+msgid "Please provide tags."
+msgstr "Lütfen etiketleri giriniz."
+
+#: templates/add_article.html:8
+msgid "Add New Article"
+msgstr "Yeni Yazı Ekle"
+
+#: templates/base.html:67
+msgid "Follow us in Twitter!"
+msgstr "Bizi Twitter`da takip edin."
+
+#: templates/base.html:96
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/base.html:97
+#, fuzzy
+msgid "Add Article"
+msgstr "Yeni Yazı Ekle"
+
+#: templates/base.html:98
+#, fuzzy
+msgid "My Articles"
+msgstr "Yazılarım"
+
+#: templates/base.html:99
+msgid "Logout"
+msgstr "Çıkş Yap"
+
+#: templates/base.html:107
+msgid "Search..."
+msgstr "Ne Aramıştınız..."
+
+#: templates/base.html:123
+msgid "Admin Login"
+msgstr "Admin Giriş"
+
+#: templates/base.html:124
+msgid "Contact"
+msgstr "İletişim"
+
+#: templates/base.html:126
+msgid "Login"
+msgstr "Giriş Yap"
+
+#: templates/base.html:127
+msgid "Register"
+msgstr "Kayıt Ol"

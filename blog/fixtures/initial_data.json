@@ -1,0 +1,1230 @@
+[
+{
+    "pk": 1, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "permission", 
+        "name": "permission", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 2, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "group", 
+        "name": "group", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 3, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "user", 
+        "name": "user", 
+        "app_label": "auth"
+    }
+},
+{
+    "pk": 4, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "contenttype", 
+        "name": "content type", 
+        "app_label": "contenttypes"
+    }
+},
+{
+    "pk": 5, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "session", 
+        "name": "session", 
+        "app_label": "sessions"
+    }
+},
+{
+    "pk": 6, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "site", 
+        "name": "site", 
+        "app_label": "sites"
+    }
+},
+{
+    "pk": 7, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "logentry", 
+        "name": "log entry", 
+        "app_label": "admin"
+    }
+},
+{
+    "pk": 8, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "category", 
+        "name": "category", 
+        "app_label": "article"
+    }
+},
+{
+    "pk": 9, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "article", 
+        "name": "article", 
+        "app_label": "article"
+    }
+},
+{
+    "pk": 10, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "userprofile", 
+        "name": "user profile", 
+        "app_label": "account"
+    }
+},
+{
+    "pk": 11, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "taskmeta", 
+        "name": "task state", 
+        "app_label": "djcelery"
+    }
+},
+{
+    "pk": 12, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "tasksetmeta", 
+        "name": "saved group result", 
+        "app_label": "djcelery"
+    }
+},
+{
+    "pk": 13, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "intervalschedule", 
+        "name": "interval", 
+        "app_label": "djcelery"
+    }
+},
+{
+    "pk": 14, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "crontabschedule", 
+        "name": "crontab", 
+        "app_label": "djcelery"
+    }
+},
+{
+    "pk": 15, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "periodictasks", 
+        "name": "periodic tasks", 
+        "app_label": "djcelery"
+    }
+},
+{
+    "pk": 16, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "periodictask", 
+        "name": "periodic task", 
+        "app_label": "djcelery"
+    }
+},
+{
+    "pk": 17, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "workerstate", 
+        "name": "worker", 
+        "app_label": "djcelery"
+    }
+},
+{
+    "pk": 18, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "taskstate", 
+        "name": "task", 
+        "app_label": "djcelery"
+    }
+},
+{
+    "pk": 19, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "comment", 
+        "name": "comment", 
+        "app_label": "comment"
+    }
+},
+{
+    "pk": 20, 
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "model": "activation", 
+        "name": "activation", 
+        "app_label": "comment"
+    }
+},
+{
+    "pk": "dsp5e6a8407x9j3fndcthkubl7kjktoc", 
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2013-09-09T10:41:36.049Z", 
+        "session_data": "NzFlZTA4ODZmNGY4OGQ5OTk2NDhmNmZhNDExNWZhMDViYThiNWIzMjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSFhY2NvdW50LmJhY2tlbmRzLkVtYWlsQXV0aEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1Lg=="
+    }
+},
+{
+    "pk": 1, 
+    "model": "sites.site", 
+    "fields": {
+        "domain": "example.com", 
+        "name": "example.com"
+    }
+},
+{
+    "pk": 1, 
+    "model": "article.category", 
+    "fields": {
+        "name": "General"
+    }
+},
+{
+    "pk": 2, 
+    "model": "article.category", 
+    "fields": {
+        "name": "Technology"
+    }
+},
+{
+    "pk": 3, 
+    "model": "article.category", 
+    "fields": {
+        "name": "Entertainment"
+    }
+},
+{
+    "pk": 4, 
+    "model": "article.category", 
+    "fields": {
+        "name": "Education"
+    }
+},
+{
+    "pk": 5, 
+    "model": "article.category", 
+    "fields": {
+        "name": "Fashion"
+    }
+},
+{
+    "pk": 6, 
+    "model": "article.category", 
+    "fields": {
+        "name": "Food"
+    }
+},
+{
+    "pk": 7, 
+    "model": "article.category", 
+    "fields": {
+        "name": "Gaming"
+    }
+},
+{
+    "pk": 8, 
+    "model": "article.category", 
+    "fields": {
+        "name": "Sports"
+    }
+},
+{
+    "pk": 9, 
+    "model": "article.category", 
+    "fields": {
+        "name": "Movies"
+    }
+},
+{
+    "pk": 1, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat sapien, aliquam sit amet tellus ut, rutrum sodales ipsum. Praesent pulvinar mattis diam at commodo. Donec volutpat mauris orci. Cras pretium, metus nec pellentesque semper, arcu risus posuere justo, ut suscipit est neque sit amet quam. Praesent sed bibendum sem. Proin sollicitudin quis sem at accumsan. Quisque magna purus, ultricies non cursus sit amet, accumsan in lorem. Etiam quis ligula commodo, vehicula nisl ut, egestas lectus. Donec consectetur, sapien et pretium dictum, est sapien volutpat nisl, nec auctor eros metus et metus. Sed ut ultrices dolor, et congue sem. Cras porta felis vel faucibus suscipit. Aliquam pretium lacinia libero nec congue. Integer malesuada enim quis purus iaculis, nec consequat dolor lacinia. Curabitur ut vehicula nunc, eu vulputate nisi. Quisque interdum pretium ullamcorper.", 
+        "name": "Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 1, 
+        "article": 1, 
+        "content_type": 9, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@markafoni.com"
+    }
+},
+{
+    "pk": 2, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat sapien, aliquam sit amet tellus ut, rutrum sodales ipsum. Praesent pulvinar mattis diam at commodo. Donec volutpat mauris orci. Cras pretium, metus nec pellentesque semper, arcu risus posuere justo, ut suscipit est neque sit amet quam. ", 
+        "name": "Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 1, 
+        "article": 1, 
+        "content_type": 19, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@markafoni.com"
+    }
+},
+{
+    "pk": 3, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat sapien, aliquam sit amet tellus ut, rutrum sodales ipsum.", 
+        "name": "Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 2, 
+        "article": 1, 
+        "content_type": 19, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@markafoni.com"
+    }
+},
+{
+    "pk": 4, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "Lorem ipsum dolor sit amet,", 
+        "name": "Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 2, 
+        "article": 1, 
+        "content_type": 19, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@markafoni.com"
+    }
+},
+{
+    "pk": 5, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "In vitae suscipit urna. Sed laoreet dui sed augue volutpat condimentum. Phasellus et neque mi. Sed et lorem sagittis, laoreet justo semper, mattis libero. Curabitur nec odio et tellus congue consequat quis ac velit. Fusce mattis, odio in congue malesuada, diam tellus dignissim ante, quis venenatis est est vitae dolor. Aenean est nibh, dignissim sit amet dolor vitae, sagittis auctor neque.", 
+        "name": "Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 1, 
+        "article": 1, 
+        "content_type": 9, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@markafoni.com"
+    }
+},
+{
+    "pk": 6, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "In vitae suscipit urna. Sed laoreet dui sed augue volutpat condimentum. Phasellus et neque mi. ", 
+        "name": "Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 5, 
+        "article": 1, 
+        "content_type": 19, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@markafoni.com"
+    }
+},
+{
+    "pk": 7, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "In vitae suscipit urna. Sed laoreet dui sed augue volutpat condimentum. Phasellus et neque mi. Sed et lorem sagittis, laoreet justo semper, mattis libero. Curabitur nec odio et tellus congue consequat quis ac velit.", 
+        "name": "Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 6, 
+        "article": 1, 
+        "content_type": 19, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@markafoni.com"
+    }
+},
+{
+    "pk": 8, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "In vitae suscipit urna.", 
+        "name": "Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 7, 
+        "article": 1, 
+        "content_type": 19, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@markafoni.com"
+    }
+},
+{
+    "pk": 9, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "In vitae", 
+        "name": "Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 7, 
+        "article": 1, 
+        "content_type": 19, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@markafoni.com"
+    }
+},
+{
+    "pk": 10, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "Django is a very useful.", 
+        "name": " Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 4, 
+        "article": 4, 
+        "content_type": 9, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@hotmail.com"
+    }
+},
+{
+    "pk": 11, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "Yes, you are right!", 
+        "name": " Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 10, 
+        "article": 4, 
+        "content_type": 19, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@hotmail.com"
+    }
+},
+{
+    "pk": 12, 
+    "model": "comment.comment", 
+    "fields": {
+        "comment": "Good Work!!!!", 
+        "name": " Yakup Adakli", 
+        "is_active": true, 
+        "object_id": 4, 
+        "article": 4, 
+        "content_type": 9, 
+        "pub_date": "2013-08-26T10:33:33.320Z", 
+        "email": "yakup.adakli@hotmail.com"
+    }
+},
+{
+    "pk": 1, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_permission", 
+        "name": "Can add permission", 
+        "content_type": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_permission", 
+        "name": "Can change permission", 
+        "content_type": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_permission", 
+        "name": "Can delete permission", 
+        "content_type": 1
+    }
+},
+{
+    "pk": 4, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_group", 
+        "name": "Can add group", 
+        "content_type": 2
+    }
+},
+{
+    "pk": 5, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_group", 
+        "name": "Can change group", 
+        "content_type": 2
+    }
+},
+{
+    "pk": 6, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_group", 
+        "name": "Can delete group", 
+        "content_type": 2
+    }
+},
+{
+    "pk": 7, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_user", 
+        "name": "Can add user", 
+        "content_type": 3
+    }
+},
+{
+    "pk": 8, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_user", 
+        "name": "Can change user", 
+        "content_type": 3
+    }
+},
+{
+    "pk": 9, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_user", 
+        "name": "Can delete user", 
+        "content_type": 3
+    }
+},
+{
+    "pk": 10, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_contenttype", 
+        "name": "Can add content type", 
+        "content_type": 4
+    }
+},
+{
+    "pk": 11, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_contenttype", 
+        "name": "Can change content type", 
+        "content_type": 4
+    }
+},
+{
+    "pk": 12, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_contenttype", 
+        "name": "Can delete content type", 
+        "content_type": 4
+    }
+},
+{
+    "pk": 13, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_session", 
+        "name": "Can add session", 
+        "content_type": 5
+    }
+},
+{
+    "pk": 14, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_session", 
+        "name": "Can change session", 
+        "content_type": 5
+    }
+},
+{
+    "pk": 15, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_session", 
+        "name": "Can delete session", 
+        "content_type": 5
+    }
+},
+{
+    "pk": 16, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_site", 
+        "name": "Can add site", 
+        "content_type": 6
+    }
+},
+{
+    "pk": 17, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_site", 
+        "name": "Can change site", 
+        "content_type": 6
+    }
+},
+{
+    "pk": 18, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_site", 
+        "name": "Can delete site", 
+        "content_type": 6
+    }
+},
+{
+    "pk": 19, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_logentry", 
+        "name": "Can add log entry", 
+        "content_type": 7
+    }
+},
+{
+    "pk": 20, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_logentry", 
+        "name": "Can change log entry", 
+        "content_type": 7
+    }
+},
+{
+    "pk": 21, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_logentry", 
+        "name": "Can delete log entry", 
+        "content_type": 7
+    }
+},
+{
+    "pk": 22, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_category", 
+        "name": "Can add category", 
+        "content_type": 8
+    }
+},
+{
+    "pk": 23, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_category", 
+        "name": "Can change category", 
+        "content_type": 8
+    }
+},
+{
+    "pk": 24, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_category", 
+        "name": "Can delete category", 
+        "content_type": 8
+    }
+},
+{
+    "pk": 25, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_article", 
+        "name": "Can add article", 
+        "content_type": 9
+    }
+},
+{
+    "pk": 26, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_article", 
+        "name": "Can change article", 
+        "content_type": 9
+    }
+},
+{
+    "pk": 27, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_article", 
+        "name": "Can delete article", 
+        "content_type": 9
+    }
+},
+{
+    "pk": 28, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_userprofile", 
+        "name": "Can add user profile", 
+        "content_type": 10
+    }
+},
+{
+    "pk": 29, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_userprofile", 
+        "name": "Can change user profile", 
+        "content_type": 10
+    }
+},
+{
+    "pk": 30, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_userprofile", 
+        "name": "Can delete user profile", 
+        "content_type": 10
+    }
+},
+{
+    "pk": 31, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_taskmeta", 
+        "name": "Can add task state", 
+        "content_type": 11
+    }
+},
+{
+    "pk": 32, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_taskmeta", 
+        "name": "Can change task state", 
+        "content_type": 11
+    }
+},
+{
+    "pk": 33, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_taskmeta", 
+        "name": "Can delete task state", 
+        "content_type": 11
+    }
+},
+{
+    "pk": 34, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_tasksetmeta", 
+        "name": "Can add saved group result", 
+        "content_type": 12
+    }
+},
+{
+    "pk": 35, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_tasksetmeta", 
+        "name": "Can change saved group result", 
+        "content_type": 12
+    }
+},
+{
+    "pk": 36, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_tasksetmeta", 
+        "name": "Can delete saved group result", 
+        "content_type": 12
+    }
+},
+{
+    "pk": 37, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_intervalschedule", 
+        "name": "Can add interval", 
+        "content_type": 13
+    }
+},
+{
+    "pk": 38, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_intervalschedule", 
+        "name": "Can change interval", 
+        "content_type": 13
+    }
+},
+{
+    "pk": 39, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_intervalschedule", 
+        "name": "Can delete interval", 
+        "content_type": 13
+    }
+},
+{
+    "pk": 40, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_crontabschedule", 
+        "name": "Can add crontab", 
+        "content_type": 14
+    }
+},
+{
+    "pk": 41, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_crontabschedule", 
+        "name": "Can change crontab", 
+        "content_type": 14
+    }
+},
+{
+    "pk": 42, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_crontabschedule", 
+        "name": "Can delete crontab", 
+        "content_type": 14
+    }
+},
+{
+    "pk": 43, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_periodictasks", 
+        "name": "Can add periodic tasks", 
+        "content_type": 15
+    }
+},
+{
+    "pk": 44, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_periodictasks", 
+        "name": "Can change periodic tasks", 
+        "content_type": 15
+    }
+},
+{
+    "pk": 45, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_periodictasks", 
+        "name": "Can delete periodic tasks", 
+        "content_type": 15
+    }
+},
+{
+    "pk": 46, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_periodictask", 
+        "name": "Can add periodic task", 
+        "content_type": 16
+    }
+},
+{
+    "pk": 47, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_periodictask", 
+        "name": "Can change periodic task", 
+        "content_type": 16
+    }
+},
+{
+    "pk": 48, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_periodictask", 
+        "name": "Can delete periodic task", 
+        "content_type": 16
+    }
+},
+{
+    "pk": 49, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_workerstate", 
+        "name": "Can add worker", 
+        "content_type": 17
+    }
+},
+{
+    "pk": 50, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_workerstate", 
+        "name": "Can change worker", 
+        "content_type": 17
+    }
+},
+{
+    "pk": 51, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_workerstate", 
+        "name": "Can delete worker", 
+        "content_type": 17
+    }
+},
+{
+    "pk": 52, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_taskstate", 
+        "name": "Can add task", 
+        "content_type": 18
+    }
+},
+{
+    "pk": 53, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_taskstate", 
+        "name": "Can change task", 
+        "content_type": 18
+    }
+},
+{
+    "pk": 54, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_taskstate", 
+        "name": "Can delete task", 
+        "content_type": 18
+    }
+},
+{
+    "pk": 55, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_comment", 
+        "name": "Can add comment", 
+        "content_type": 19
+    }
+},
+{
+    "pk": 56, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_comment", 
+        "name": "Can change comment", 
+        "content_type": 19
+    }
+},
+{
+    "pk": 57, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_comment", 
+        "name": "Can delete comment", 
+        "content_type": 19
+    }
+},
+{
+    "pk": 58, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "add_activation", 
+        "name": "Can add activation", 
+        "content_type": 20
+    }
+},
+{
+    "pk": 59, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "change_activation", 
+        "name": "Can change activation", 
+        "content_type": 20
+    }
+},
+{
+    "pk": 60, 
+    "model": "auth.permission", 
+    "fields": {
+        "codename": "delete_activation", 
+        "name": "Can delete activation", 
+        "content_type": 20
+    }
+},
+{
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+        "username": "yakupadakli", 
+        "first_name": "Yakup", 
+        "last_name": "Adakl\u0131", 
+        "is_active": true, 
+        "is_superuser": true, 
+        "is_staff": true, 
+        "last_login": "2013-08-26T10:41:35.914Z", 
+        "groups": [], 
+        "user_permissions": [], 
+        "password": "pbkdf2_sha256$10000$kDvdHKRO9Lce$wiU2WDqLNq3ePpcAcvAPqe46ZZdcFVamnJ2+BB5HYR8=", 
+        "email": "yakup.adakli@hotmail.com", 
+        "date_joined": "2013-08-26T10:27:13.320Z"
+    }
+},
+{
+    "pk": 2, 
+    "model": "auth.user", 
+    "fields": {
+        "username": "kqiUyQJBBBqIpzIvPtPgavLlrhBFhf", 
+        "first_name": "Yakup", 
+        "last_name": "Adakl\u0131", 
+        "is_active": true, 
+        "is_superuser": false, 
+        "is_staff": false, 
+        "last_login": "2013-08-26T10:38:43.327Z", 
+        "groups": [], 
+        "user_permissions": [], 
+        "password": "pbkdf2_sha256$10000$MkODLSrt4jRT$NiFKiXmXHrYWkRc5K0jcmxh02ryZ0R5oFsepUGK+CTw=", 
+        "email": "yakup.adakli@markafoni.com", 
+        "date_joined": "2013-08-26T10:38:27.165Z"
+    }
+},
+{
+    "pk": 1, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:34:51.451Z", 
+        "object_repr": "General", 
+        "object_id": "1", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 8
+    }
+},
+{
+    "pk": 2, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:34:55.816Z", 
+        "object_repr": "Technology", 
+        "object_id": "2", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 8
+    }
+},
+{
+    "pk": 3, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:34:58.952Z", 
+        "object_repr": "Entertainment", 
+        "object_id": "3", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 8
+    }
+},
+{
+    "pk": 4, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:35:02.000Z", 
+        "object_repr": "Education", 
+        "object_id": "4", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 8
+    }
+},
+{
+    "pk": 5, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:35:05.033Z", 
+        "object_repr": "Fashion", 
+        "object_id": "5", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 8
+    }
+},
+{
+    "pk": 6, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:35:07.616Z", 
+        "object_repr": "Food", 
+        "object_id": "6", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 8
+    }
+},
+{
+    "pk": 7, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:35:10.272Z", 
+        "object_repr": "Gaming", 
+        "object_id": "7", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 8
+    }
+},
+{
+    "pk": 8, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:35:13.735Z", 
+        "object_repr": "Sports", 
+        "object_id": "8", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 8
+    }
+},
+{
+    "pk": 9, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:35:18.080Z", 
+        "object_repr": "Movies", 
+        "object_id": "9", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 8
+    }
+},
+{
+    "pk": 10, 
+    "model": "admin.logentry", 
+    "fields": {
+        "action_flag": 1, 
+        "action_time": "2013-08-26T10:42:07.225Z", 
+        "object_repr": "yakupadakli", 
+        "object_id": "2", 
+        "change_message": "", 
+        "user": 1, 
+        "content_type": 10
+    }
+},
+{
+    "pk": 1, 
+    "model": "article.article", 
+    "fields": {
+        "body": "<div id=\"lipsum\">\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat sapien, aliquam sit amet tellus ut, rutrum sodales ipsum. Praesent pulvinar mattis diam at commodo. Donec volutpat mauris orci. Cras pretium, metus nec pellentesque semper, arcu risus posuere justo, ut suscipit est neque sit amet quam. Praesent sed bibendum sem. Proin sollicitudin quis sem at accumsan. Quisque magna purus, ultricies non cursus sit amet, accumsan in lorem. Etiam quis ligula commodo, vehicula nisl ut, egestas lectus. Donec consectetur, sapien et pretium dictum, est sapien volutpat nisl, nec auctor eros metus et metus. Sed ut ultrices dolor, et congue sem. Cras porta felis vel faucibus suscipit. Aliquam pretium lacinia libero nec congue. Integer malesuada enim quis purus iaculis, nec consequat dolor lacinia. Curabitur ut vehicula nunc, eu vulputate nisi. Quisque interdum pretium ullamcorper.</p>\r\n\r\n<p>In vitae suscipit urna. Sed laoreet dui sed augue volutpat condimentum. Phasellus et neque mi. Sed et lorem sagittis, laoreet justo semper, mattis libero. Curabitur nec odio et tellus congue consequat quis ac velit. Fusce mattis, odio in congue malesuada, diam tellus dignissim ante, quis venenatis est est vitae dolor. Aenean est nibh, dignissim sit amet dolor vitae, sagittis auctor neque.</p>\r\n\r\n<p>Mauris auctor sem sed neque adipiscing, ac interdum risus ultricies. Praesent at felis orci. Praesent ullamcorper eleifend faucibus. In fermentum eu tellus sed rhoncus. Nullam at arcu ut elit interdum consequat. Sed fringilla dui sed quam lobortis, ac feugiat sapien porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean vitae commodo velit. Fusce faucibus fringilla placerat. Aliquam id commodo justo. Nulla facilisi. Ut metus nisi, mollis scelerisque euismod eget, molestie ut odio. Sed at velit arcu. Aliquam ac facilisis neque.</p>\r\n\r\n<p>Suspendisse dolor lectus, ullamcorper nec varius quis, elementum quis dui. Nullam convallis turpis at neque pulvinar cursus. Maecenas ut tortor justo. Nunc elementum nisi vel scelerisque fringilla. Maecenas tincidunt nunc in risus vestibulum viverra. Maecenas arcu nisl, placerat vitae enim vel, ultricies dictum enim. Cras sed nisl tortor. Cras tortor neque, condimentum quis pellentesque in, suscipit vel ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse consectetur eleifend rutrum. Quisque pretium felis a justo vehicula sagittis. Phasellus condimentum diam felis, eget malesuada justo lacinia sit amet. Morbi volutpat quis lorem et imperdiet. In eleifend dui non mollis tristique.</p>\r\n\r\n<p>Pellentesque pulvinar, nisi sed tempus volutpat, ligula justo placerat leo, ac gravida lorem elit ut risus. Quisque accumsan magna sed metus imperdiet ultrices. Proin quis pulvinar nibh. Integer mollis ligula metus, id posuere dolor suscipit eu. Phasellus dignissim, ipsum eu luctus elementum, eros augue feugiat nunc, vitae adipiscing eros mi tempor velit. Sed eu dui velit. Proin pharetra imperdiet elit, quis malesuada tellus. Suspendisse in ullamcorper turpis, sed tristique sapien.</p>\r\n</div>\r\n", 
+        "author": 1, 
+        "image": "blog/windows-81-kurulum-rehberi-_640x359.png", 
+        "tags": "Lorem Ipsum", 
+        "title": "Lorem ipsum", 
+        "pub_date": "2013-08-26T10:35:36.638Z", 
+        "slug": "lorem-ipsum-1", 
+        "categories": [
+            1
+        ]
+    }
+},
+{
+    "pk": 2, 
+    "model": "article.article", 
+    "fields": {
+        "body": "<h1>Meet Django</h1>\r\n\r\n<h2 class=\"deck\">Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.</h2>\r\n\r\n<p>Developed by a fast-moving online-news operation, Django was designed to handle two challenges: the intensive deadlines of a newsroom and the stringent requirements of the experienced Web developers who wrote it. It lets you build high-performing, elegant Web applications quickly.</p>\r\n\r\n<p>Django focuses on automating as much as possible and adhering to the <a href=\"http://c2.com/cgi/wiki?DontRepeatYourself\"><abbr title=\"Don't Repeat Yourself\">DRY</abbr> principle</a>.</p>\r\n\r\n<p>Dive in by <a href=\"https://docs.djangoproject.com/en/1.5/intro/overview/\">reading the overview &rarr;</a></p>\r\n\r\n<p>When you&#39;re ready to code, read the <a href=\"https://docs.djangoproject.com/en/1.5/intro/install/\">installation guide</a> and <a href=\"https://docs.djangoproject.com/en/1.5/intro/tutorial01/\">tutorial</a>.</p>\r\n", 
+        "author": 1, 
+        "image": "blog/django.png", 
+        "tags": "Django", 
+        "title": "Meet Django", 
+        "pub_date": "2013-08-26T10:37:05.337Z", 
+        "slug": "meet-django", 
+        "categories": [
+            1, 
+            2
+        ]
+    }
+},
+{
+    "pk": 3, 
+    "model": "article.article", 
+    "fields": {
+        "body": "<h2>Creating a project</h2>\r\n\r\n<p><img alt=\"\" src=\"/uploads/editor/2013/08/26/django.gif\" style=\"width: 117px; height: 41px; margin: 10px; float: left;\" />If this is your first time using Django, you&rsquo;ll have to take care of some initial setup. Namely, you&rsquo;ll need to auto-generate some code that establishes a Django <a class=\"reference internal\" href=\"https://docs.djangoproject.com/en/1.5/glossary/#term-project\"><em class=\"xref std std-term\">project</em></a> &ndash; a collection of settings for an instance of Django, including database configuration, Django-specific options and application-specific settings.</p>\r\n\r\n<p>From the command line, <tt class=\"docutils literal\"><span class=\"pre\">cd</span></tt> into a directory where you&rsquo;d like to store your code, then run the following command:</p>\r\n\r\n<div class=\"highlight-bash\">\r\n<div class=\"highlight\">\r\n<pre>\r\ndjango-admin.py startproject mysite\r\n</pre>\r\n</div>\r\n</div>\r\n\r\n<p>This will create a <tt class=\"docutils literal\"><span class=\"pre\">mysite</span></tt> directory in your current directory. If it didn&rsquo;t work, see <a class=\"reference internal\" href=\"https://docs.djangoproject.com/en/1.5/faq/troubleshooting/#troubleshooting-django-admin-py\"><em>Problems running django-admin.py</em></a>.</p>\r\n\r\n<div class=\"admonition note\">\r\n<p class=\"first admonition-title\">Note</p>\r\n\r\n<p class=\"last\">You&rsquo;ll need to avoid naming projects after built-in Python or Django components. In particular, this means you should avoid using names like <tt class=\"docutils literal\"><span class=\"pre\">django</span></tt> (which will conflict with Django itself) or <tt class=\"docutils literal\"><span class=\"pre\">test</span></tt> (which conflicts with a built-in Python package).</p>\r\n</div>\r\n\r\n<div class=\"admonition-where-should-this-code-live admonition\">\r\n<p class=\"first admonition-title\">Where should this code live?</p>\r\n\r\n<p>If your background is in plain old PHP (with no use of modern frameworks), you&rsquo;re probably used to putting code under the Web server&rsquo;s document root (in a place such as <tt class=\"docutils literal\"><span class=\"pre\">/var/www</span></tt>). With Django, you don&rsquo;t do that. It&rsquo;s not a good idea to put any of this Python code within your Web server&rsquo;s document root, because it risks the possibility that people may be able to view your code over the Web. That&rsquo;s not good for security.</p>\r\n\r\n<p class=\"last\">Put your code in some directory <strong>outside</strong> of the document root, such as <tt class=\"file docutils literal\"><span class=\"pre\">/home/mycode</span></tt>.</p>\r\n</div>\r\n\r\n<p>Let&rsquo;s look at what <a class=\"reference internal\" href=\"https://docs.djangoproject.com/en/1.5/ref/django-admin/#django-admin-startproject\"><tt class=\"xref std std-djadmin docutils literal\"><span class=\"pre\">startproject</span></tt></a> created:</p>\r\n\r\n<div class=\"highlight-python\">\r\n<pre>\r\nmysite/\r\n    manage.py\r\n    mysite/\r\n        __init__.py\r\n        settings.py\r\n        urls.py\r\n        wsgi.py</pre>\r\n</div>\r\n\r\n<div class=\"admonition-doesn-t-match-what-you-see admonition\">\r\n<p class=\"first admonition-title\">Doesn&rsquo;t match what you see?</p>\r\n\r\n<p class=\"last\">The default project layout recently changed. If you&rsquo;re seeing a &ldquo;flat&rdquo; layout (with no inner <tt class=\"file docutils literal\"><span class=\"pre\">mysite/</span></tt> directory), you&rsquo;re probably using a version of Django that doesn&rsquo;t match this tutorial version. You&rsquo;ll want to either switch to the older tutorial or the newer Django version.</p>\r\n</div>\r\n\r\n<p>These files are:</p>\r\n\r\n<ul class=\"simple\">\r\n\t<li>The outer <tt class=\"file docutils literal\"><span class=\"pre\">mysite/</span></tt> root directory is just a container for your project. Its name doesn&rsquo;t matter to Django; you can rename it to anything you like.</li>\r\n\t<li><tt class=\"file docutils literal\"><span class=\"pre\">manage.py</span></tt>: A command-line utility that lets you interact with this Django project in various ways. You can read all the details about <tt class=\"file docutils literal\"><span class=\"pre\">manage.py</span></tt> in <a class=\"reference internal\" href=\"https://docs.djangoproject.com/en/1.5/ref/django-admin/\"><em>django-admin.py and manage.py</em></a>.</li>\r\n\t<li>The inner <tt class=\"file docutils literal\"><span class=\"pre\">mysite/</span></tt> directory is the actual Python package for your project. Its name is the Python package name you&rsquo;ll need to use to import anything inside it (e.g. <tt class=\"docutils literal\"><span class=\"pre\">mysite.urls</span></tt>).</li>\r\n\t<li><tt class=\"file docutils literal\"><span class=\"pre\">mysite/__init__.py</span></tt>: An empty file that tells Python that this directory should be considered a Python package. (Read <a class=\"reference external\" href=\"http://docs.python.org/tutorial/modules.html#packages\">more about packages</a> in the official Python docs if you&rsquo;re a Python beginner.)</li>\r\n\t<li><tt class=\"file docutils literal\"><span class=\"pre\">mysite/settings.py</span></tt>: Settings/configuration for this Django project. <a class=\"reference internal\" href=\"https://docs.djangoproject.com/en/1.5/topics/settings/\"><em>Django settings</em></a> will tell you all about how settings work.</li>\r\n\t<li><tt class=\"file docutils literal\"><span class=\"pre\">mysite/urls.py</span></tt>: The URL declarations for this Django project; a &ldquo;table of contents&rdquo; of your Django-powered site. You can read more about URLs in <a class=\"reference internal\" href=\"https://docs.djangoproject.com/en/1.5/topics/http/urls/\"><em>URL dispatcher</em></a>.</li>\r\n\t<li><tt class=\"file docutils literal\"><span class=\"pre\">mysite/wsgi.py</span></tt>: An entry-point for WSGI-compatible webservers to serve your project. See <a class=\"reference internal\" href=\"https://docs.djangoproject.com/en/1.5/howto/deployment/wsgi/\"><em>How to deploy with WSGI</em></a> for more details.</li>\r\n</ul>\r\n", 
+        "author": 1, 
+        "image": "blog/django_1.png", 
+        "tags": "Django, Create Project", 
+        "title": "Writing your first Django app, Creating a Project", 
+        "pub_date": "2013-08-26T10:38:04.225Z", 
+        "slug": "writing-your-first-django-app-creating-a-project", 
+        "categories": [
+            1, 
+            3
+        ]
+    }
+},
+{
+    "pk": 4, 
+    "model": "article.article", 
+    "fields": {
+        "body": "<h2>Activate the admin site</h2>\r\n\r\n<p><img alt=\"\" src=\"/uploads/editor/2013/08/26/django.gif\" style=\"width: 180px; margin: 8px; float: left; height: 63px;\" />The Django admin site is not activated by default &ndash; it&rsquo;s an opt-in thing. To activate the admin site for your installation, do these three things:</p>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p class=\"first\">Uncomment <tt class=\"docutils literal\"><span class=\"pre\">&quot;django.contrib.admin&quot;</span></tt> in the <a class=\"reference internal\" href=\"https://docs.djangoproject.com/en/1.5/ref/settings/#std:setting-INSTALLED_APPS\"><tt class=\"xref std std-setting docutils literal\"><span class=\"pre\">INSTALLED_APPS</span></tt></a> setting.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p class=\"first\">Run <tt class=\"docutils literal\"><span class=\"pre\">python</span> <span class=\"pre\">manage.py</span> <span class=\"pre\">syncdb</span></tt>. Since you have added a new application to <a class=\"reference internal\" href=\"https://docs.djangoproject.com/en/1.5/ref/settings/#std:setting-INSTALLED_APPS\"><tt class=\"xref std std-setting docutils literal\"><span class=\"pre\">INSTALLED_APPS</span></tt></a>, the database tables need to be updated.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p class=\"first\">Edit your <tt class=\"docutils literal\"><span class=\"pre\">mysite/urls.py</span></tt> file and uncomment the lines that reference the admin &ndash; there are three lines in total to uncomment. This file is a URLconf; we&rsquo;ll dig into URLconfs in the next tutorial. For now, all you need to know is that it maps URL roots to applications. In the end, you should have a <tt class=\"docutils literal\"><span class=\"pre\">urls.py</span></tt> file that looks like this:</p>\r\n\r\n\t<pre class=\"literal-block\">\r\nfrom django.conf.urls import patterns, include, url\r\n\r\n# Uncomment the next two lines to enable the admin:\r\n<strong>from django.contrib import admin</strong>\r\n<strong>admin.autodiscover()</strong>\r\n\r\nurlpatterns = patterns(&#39;&#39;,\r\n    # Examples:\r\n    # url(r&#39;^$&#39;, &#39;{{ project_name }}.views.home&#39;, name=&#39;home&#39;),\r\n    # url(r&#39;^{{ project_name }}/&#39;, include(&#39;{{ project_name }}.foo.urls&#39;)),\r\n\r\n    # Uncomment the admin/doc line below to enable admin documentation:\r\n    # url(r&#39;^admin/doc/&#39;, include(&#39;django.contrib.admindocs.urls&#39;)),\r\n\r\n    # Uncomment the next line to enable the admin:\r\n    <strong>url(r&#39;^admin/&#39;, include(admin.site.urls)),</strong>\r\n)\r\n</pre>\r\n\r\n\t<p>(The bold lines are the ones that needed to be uncommented.)</p>\r\n\t</li>\r\n</ul>\r\n", 
+        "author": 2, 
+        "image": "blog/django_2.png", 
+        "tags": "Django, Create Project, Activate Admin Site", 
+        "title": "Writing your first Django app, Activate the admin site", 
+        "pub_date": "2013-08-26T10:39:44.511Z", 
+        "slug": "writing-your-first-django-app-activate-the-admin-site", 
+        "categories": [
+            1, 
+            2, 
+            3, 
+            4
+        ]
+    }
+},
+{
+    "pk": 1, 
+    "model": "account.userprofile", 
+    "fields": {
+        "picture": "profile_pics/django_1.png", 
+        "activation_key": "4b2bb5ff5bee963e8beb", 
+        "key_expires": "2013-08-28T10:38:27.164Z", 
+        "url": "", 
+        "user": 2, 
+        "birth_date": "1995-08-26", 
+        "slug": "yakup-adakli-1"
+    }
+},
+{
+    "pk": 2, 
+    "model": "account.userprofile", 
+    "fields": {
+        "picture": "profile_pics/TokyoPanoramaShredded.png", 
+        "activation_key": "1", 
+        "key_expires": "2013-08-26T10:42:04Z", 
+        "url": "", 
+        "user": 1, 
+        "birth_date": "1995-08-14", 
+        "slug": "yakup-adakli"
+    }
+}
+]
