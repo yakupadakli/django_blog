@@ -2,6 +2,7 @@
 from django.contrib import admin
 from blog import settings
 from django.conf.urls import patterns, include, url
+from blog.views import ArticleListView
 
 admin.autodiscover()
 
@@ -20,6 +21,9 @@ urlpatterns = patterns('',
 
                        url(r'^$', "article.views.index",
                            name="index"),
+
+                       url(r'^user/(?P<pk>\d+)/$', ArticleListView.as_view(),
+                           name="article-list"),
 
                        url(r'^articles/',
                            include('article.urls',
@@ -44,7 +48,12 @@ if settings.DEBUG:
                                 'django.views.static.serve', {
                                     'document_root': settings.MEDIA_ROOT,
                                 }),
-    )
+                            # Here the path must match with 'STATIC_URL' setting
+                            url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {
+                                'document_root': settings.STATIC_ROOT,
+                                }),
+
+                            )
 
 handler404 = 'blog.views.handler404'
 handler500 = 'blog.views.handler500'
