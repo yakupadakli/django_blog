@@ -1,12 +1,10 @@
-django==1.5.1
+Django==1.5.1
 PIL
 celery
 pytz
-redis-sessions
-redis
 django-redis-sessions
+redis
 django-redis-cache
-ckeditor
 unidecode
-debug-toolbar
+django-debug-toolbar
 django-celery
