@@ -8,3 +8,4 @@ django-redis-cache
 unidecode
 django-debug-toolbar
 django-celery
+django-ckeditor
