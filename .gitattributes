@@ -1,3 +1,6 @@
 static/* linguist-vendored
 blog_static/* linguist-vendored
 templates/* linguist-vendored
+account/templates/* linguist-vendored
+article/templates/* linguist-vendored
+comment/templates/* linguist-vendored
